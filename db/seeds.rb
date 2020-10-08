@@ -42,10 +42,28 @@
 
     #  puts 'loaded Dates'
 
-     Review.create( name: 'Melissa', description: 'The Home Spa was a great idea! My hubby and I found ourselves incredibly relaxed! So Glad we were able to take the time out to relax.',
-        rating: 'five', recommend: 'yes', datenight_id: 1
-     )
-     Review.create(name: 'Giselle', description: 'The wine tasting was so different, I had never considered that before! It was a lot of fun doing the different wine tastings at home before! It is amazing how this pandemic can force you to become creative!', rating: 'four', recommend: 'yes', datenight_id: 4 ) 
+   #   Review.create( name: 'Melissa', description: 'The Home Spa was a great idea! My hubby and I found ourselves incredibly relaxed! So Glad we were able to take the time out to relax.',
+   #      rating: 'five', recommend: 'yes', datenight_id: 1
+   #   )
+   #   Review.create(name: 'Giselle', description: 'The wine tasting was so different, I had never considered that before! It was a lot of fun doing the different wine tastings at home before! It is amazing how this pandemic can force you to become creative!', rating: 'four', recommend: 'yes', datenight_id: 4 ) 
    
 
-    puts 'Reviews Loaded'
+   #  puts 'Reviews Loaded'
+
+   suggestions = Suggestion.create([{ 
+         title: "Couple's Game Night",
+         info: 'It would be really great, if you came up with a game night for couples?',
+         category: 'Fun'
+      },
+      { 
+         title: 'Netlix & Chill',
+         info: 'How could we have a classic Dinner & Movie in house date?',
+         category: 'Classics'
+      },
+      { 
+         title: 'Get Away Staycation',
+         info: 'My hubby and I love to travel, with everything going on, what do you suggest we could do to bring the destinations, in house?',
+         category: 'Romantic'
+      }
+   ])
+   puts ' suggestions loaded'

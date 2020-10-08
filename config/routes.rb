@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :subscribers
-  resources :reviews
-  resources :datenights
+  
+  resources :suggestions
+  resources :datenights do
+    resources :reviews
+  end
+  
+  
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
