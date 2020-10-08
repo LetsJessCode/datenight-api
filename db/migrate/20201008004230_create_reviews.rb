@@ -6,7 +6,7 @@ class CreateReviews < ActiveRecord::Migration[6.0]
       t.string :rating
       t.string :recommend
       t.references :datenight, null: false, foreign_key: true
-      t.references :reviewer, null: false, foreign_key: true
+      
 
       t.timestamps
     end

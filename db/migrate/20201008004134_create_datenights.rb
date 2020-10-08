@@ -4,7 +4,7 @@ class CreateDatenights < ActiveRecord::Migration[6.0]
       t.string :category
       t.string :title
       t.text :instructions
-      t.string :items
+      t.text :items
 
       t.timestamps
     end

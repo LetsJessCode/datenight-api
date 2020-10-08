@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_08_004230) do
+ActiveRecord::Schema.define(version: 2020_10_08_121138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_004230) do
     t.string "category"
     t.string "title"
     t.text "instructions"
-    t.string "items"
+    t.text "items"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -37,13 +37,16 @@ ActiveRecord::Schema.define(version: 2020_10_08_004230) do
     t.string "rating"
     t.string "recommend"
     t.bigint "datenight_id", null: false
-    t.bigint "reviewer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["datenight_id"], name: "index_reviews_on_datenight_id"
-    t.index ["reviewer_id"], name: "index_reviews_on_reviewer_id"
+  end
+
+  create_table "subscribers", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "reviews", "datenights"
-  add_foreign_key "reviews", "reviewers"
 end
