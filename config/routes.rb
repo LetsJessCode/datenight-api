@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :suggestions
   resources :datenights do
     resources :reviews
   end
+  resources :reviews
   
   
 
